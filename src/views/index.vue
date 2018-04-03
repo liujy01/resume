@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="height: 100vh;">
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
@@ -71,13 +71,13 @@ html{
 }
 /* 好了，我开始写简历了 */
 `,
-`
+            `
 /* 这个简历好像差点什么
  * 对了，这是 Markdown 格式的，我需要变成对 HR 更友好的格式
  * 简单，用开源工具翻译成 HTML 就行了
  */
  `,
- `
+            `
 /* 再对 HTML 加点样式 */
 .resumeEditor{
   padding: 2em;
@@ -175,7 +175,7 @@ html{
 
 
 `,
-`
+            `
 
 /* 这个简历好像差点什么
  * 对了，这是 Markdown 格式的，我需要变成对 HR 更友好的格式
@@ -183,7 +183,7 @@ html{
  */
 
 `,
-`
+            `
 
 /* 再对 HTML 加点样式 */
 .resumeEditor{
@@ -266,7 +266,6 @@ Fork [我的项目](https://github.com/liujy01/resume)，打造你自己的简�
       progressivelyShowStyle(n) {
         return new Promise((resolve, reject) => {
           let width = document.documentElement.clientWidth
-          console.log(width)
 
           let fullStyle = this.fullStyle.pc
           if (width <= 500) {
